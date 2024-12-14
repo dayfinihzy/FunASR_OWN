@@ -3,11 +3,12 @@
 
 
 # which gpu to train or finetune
-export CUDA_VISIBLE_DEVICES="0,1"
+export CUDA_VISIBLE_DEVICES="3,4,5,6,7"
 gpu_num=$(echo $CUDA_VISIBLE_DEVICES | awk -F "," '{print NF}')
 
 # data dir, which contains: train.json, val.json, tokens.jsonl/tokens.txt, am.mvn
-data_dir="/Users/zhifu/funasr1.0/data/list"
+data_dir="/root/FunASR_OWN/mydata/list"
+# data_dir="/Users/zhifu/funasr1.0/data/list"
 
 ## generate jsonl from wav.scp and text.txt
 #python -m funasr.datasets.audio_datasets.scp2jsonl \
@@ -21,7 +22,7 @@ tokens="${data_dir}/tokens.json"
 cmvn_file="${data_dir}/am.mvn"
 
 # exp output dir
-output_dir="/Users/zhifu/exp"
+output_dir="/root/FunASR_OWN/mymodel"
 log_file="${output_dir}/log.txt"
 
 workspace=`pwd`

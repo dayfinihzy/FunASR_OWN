@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 
-CUDA_VISIBLE_DEVICES="0,1"
+CUDA_VISIBLE_DEVICES="3,4,5,6,7"
 
 # general configuration
 feats_dir="../DATA" #feature output dictionary
 exp_dir=`pwd`
 lang=zh
 token_type=char
-stage=0
-stop_stage=5
+stage=1
+stop_stage=1
 
 # feature configuration
 nj=32
@@ -88,6 +88,7 @@ if [ ${stage} -le 2 ] && [ ${stop_stage} -ge 2 ]; then
     mkdir -p ${feats_dir}/data/${lang}_token_list/$token_type/
    
     echo "make a dictionary"
+
     echo "<blank>" > ${token_list}
     echo "<s>" >> ${token_list}
     echo "</s>" >> ${token_list}
