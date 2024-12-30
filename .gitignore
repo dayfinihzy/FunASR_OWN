@@ -29,3 +29,7 @@ examples/aishell/llm_asr_nar/*
 *egg-info
 DATA
 raw_data
+/root/FunASR_OWN/examples/aishell/paraformer/exp/baseline_paraformer_conformer_12e_6d_2048_256_zh_char_exp1/
+!/root/FunASR_OWN/examples/aishell/paraformer/exp/baseline_paraformer_conformer_12e_6d_2048_256_zh_char_exp1/model.pt
+!/root/FunASR_OWN/examples/aishell/paraformer/exp/baseline_paraformer_conformer_12e_6d_2048_256_zh_char_exp1/model.pt.best
+!/root/FunASR_OWN/examples/aishell/paraformer/exp/baseline_paraformer_conformer_12e_6d_2048_256_zh_char_exp1/model.pt.avg10

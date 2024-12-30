@@ -31,8 +31,13 @@ def load_cmvn(cmvn_file):
                 rescale_line = line_item[3 : (len(line_item) - 1)]
                 vars_list = list(rescale_line)
                 continue
-    means = np.array(means_list).astype(np.float32)
-    vars = np.array(vars_list).astype(np.float32)
+    mean_l = [eval(m) for m in means_list]
+    var_l = [eval(v) for v in vars_list]
+    means = np.array(mean_l)
+    # means = np.array(means_list).astype(np.float32)
+    vars = np.array(var_l)
+    # vars = np.array(vars_list).astype(np.float32)
+
     cmvn = np.array([means, vars])
     cmvn = torch.as_tensor(cmvn, dtype=torch.float32)
     return cmvn
